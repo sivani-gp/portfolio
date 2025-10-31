@@ -1,0 +1,47 @@
+---
+// Import global styles so they're always available.
+import '../styles/global.css';
+
+// TypeScript interface for props (optional, helps with intellisense)
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  ogType?: string;
+}
+
+// Provide CUSTOM, MEANINGFUL DEFAULTS below.
+// These defaults are used if the calling page doesn't set its own meta tags.
+const { 
+  title = 'Nithish | Portfolio',
+  description = 'Portfolio of Nithish Govind – robotics, embedded systems, AI projects, national achievements, and workshops.',
+  // Make sure this is a large (at least 1200x630) PNG/JPG/WebP you put in /public/portfolio/webpage.png
+  image = 'https://nithishgovind.github.io/portfolio/webpage.png', 
+  ogType = 'website'
+} = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
