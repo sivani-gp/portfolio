@@ -8,7 +8,7 @@ This is the source code for my personal portfolio website—built with Astro and
 
 ## 🚀 Live Preview
 
-[https://sivanigp.github.io/portfolio/](https://sivanigp.github.io/portfolio/)
+[https://sivanigp.github.io/portfolio/](https://sivani-gp.github.io/portfolio/)
 
 
 
